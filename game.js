@@ -17,7 +17,7 @@ function startGame() {
   var lvlEasy = "easy";
   var lvlMedium = "medium";
   var lvlHard = "hard";
-  var lvlSelect = prompt("Enter level difficulty. (easy, medium, hard)");
+  var lvlSelect = prompt("Enter difficulty level. (easy, medium, hard)");
   
   if (lvlSelect == lvlEasy) {
     maxX = 3;
@@ -29,8 +29,8 @@ function startGame() {
     maxX = 8;
     maxY = 8;
   } else {
-    alert("Please try again and enter a level.");
-    console.log("Please try again and enter a level");
+    alert("Please try again and enter difficulty level.");
+    console.log("Please try again and enter difficulty level");
     return lvlSelect;
   }
   
@@ -105,8 +105,8 @@ function startGame() {
     }
 
     //validate User X/Y location
-    console.log(name + " X location is: " + userX)
-    console.log(name + " Y location is: " + userY)
+    console.log(name + " X location is: " + userX);
+    console.log(name + " Y location is: " + userY);
 
     //see if user location matches treasure
     if (userX == treasureX && userY == treasureY) {
