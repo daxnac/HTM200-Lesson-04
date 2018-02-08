@@ -3,9 +3,30 @@
 <head>
   <meta charset="utf-8">
   <title>Adventure Game</title>
+  <script src="https://use.fontawesome.com/402c56e914.js"></script>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
-  <h1>Adventure Game</h1>
+  <header>
+    <h1>Adventure Game</h1>
+    <button onclick="startGame();">Start Game</button>
+  </header>
+  <section class="board">
+    <div>0</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+<!--
+  <audio id="winAudio">
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+-->
   <script src="game.js"></script>
 </body> 
 </html>

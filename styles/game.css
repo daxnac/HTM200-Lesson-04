@@ -1,0 +1,21 @@
+body {
+  font-size: 100%;
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+
+.board {
+  margin: auto;
+  display: block;
+  border: 1px solid darkgreen;
+  padding: 5rem;
+  background-color: green;
+}
+
+.board div {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid grey;
+  background-color: sandybrown;
+  
+}
