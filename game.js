@@ -1,24 +1,19 @@
 function startGame() {
-
-  // Define the size of the game play area
-  var maxX;
-  var maxY;
+  
+  // Greeting when game starts
+  document.getElementById("hiSound").play();
   
   // user starts at x0, y0 (bottom left of board)
   var userX = 0;
   var userY = 0;
-
-  // Hide the treasure, also with x y values
-  var treasureX = Math.floor(Math.random() * maxX);
-  var treasureY = Math.floor(Math.random() * maxY);
-
+  
   // Flag that controls loop
   var treasureFound = false;
 
   // Get user's name
-  var name = prompt("Welcome brave soul! What is your name?");
+  var name = prompt("What shall we call you?");
   
-  // define the size of the game play area based on user level select.
+  // Define the size of the game play area based on user level select.
   var lvlEasy = "easy";
   var lvlMedium = "medium";
   var lvlHard = "hard";
@@ -34,9 +29,18 @@ function startGame() {
     maxX = 8;
     maxY = 8;
   } else {
-    alert("Please enter a level. (easy, medium, hard)");
+    return false;
   }
-
+  
+  // Defines the size of the game play area
+  var maxX;
+  var maxY;
+  
+  // Hide the treasure, also with x y values based on level difficulty
+  var treasureX = Math.floor(Math.random() * maxX);
+  var treasureY = Math.floor(Math.random() * maxY);
+  
+  // begin while loop
   while (!treasureFound) {
     var direction = prompt("Which direction would you like to go in? (north, east, west, south)");
     console.log(direction);
@@ -53,6 +57,7 @@ function startGame() {
           userX = newX;
           userY = newY;
         } else {
+          document.getElementById("nSound").play();
           alert("Sorry! You need a passport to enter Canada");
           console.log("Sorry! You need a passport to enter Canada");
       }
@@ -64,10 +69,11 @@ function startGame() {
           userX = newX;
           userY = newY;
         } else {
+          document.getElementById("eSound").play();
           alert("Unless you can fly, you will have to hike through the Cascades.");
           console.log("Unless you can fly, you will have to hike through the Cascades.");
         }
-      } else if (direction == "south") {
+    } else if (direction == "south") {
       newX = userX;
       newY = userY - 1;
         // neither value < 0, neither is > max
@@ -75,6 +81,7 @@ function startGame() {
           userX = newX;
           userY = newY;
         } else {
+          document.getElementById("sSound").play();
           alert("Welcome to Oregon!");
           console.log("Welcome to Oregon!");
         }
@@ -86,21 +93,24 @@ function startGame() {
           userX = newX;
           userY = newY;
         } else {
-          alert("It's to cold to swim the Pacific ocean.");
-          console.log("It's to cold to swim the Pacific ocean.");
+          document.getElementById("wSound").play();
+          alert("It's too cold to swim the Pacific ocean.");
+          console.log("It's too cold to swim the Pacific ocean.");
         }
     } else {
-      console.log("Please enter real direction");
+      alert("Please enter real direction.");
+      console.log("Please enter real direction.");
     }
-    
+
     //validate User X/Y location
     console.log(name + " X location is: " + userX)
     console.log(name + " Y location is: " + userY)
 
     //see if user location matches treasure
     if (userX == treasureX && userY == treasureY) {
-      alert("Wipee! You found the treasure");
-      console.log("Wipee! You found the treasure");
+      document.getElementById("tSound").play();
+      alert("Hooray! You found the treasure");
+      console.log("Hooray! You found the treasure");
       treasureFound = true;
     }  
   }

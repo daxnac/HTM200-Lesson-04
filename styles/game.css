@@ -1,21 +1,53 @@
-body {
-  font-size: 100%;
-  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-  display: flex;
-  justify-content: center;
+  body {
+    font-size: 100%;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  }
 
-.board {
-  margin: auto;
-  display: block;
-  border: 1px solid darkgreen;
-  padding: 5rem;
-  background-color: green;
-}
+  header {
+    margin: auto;
+    display: flex;
+    font-size: 2em;
+    padding-bottom: 1rem;
+    color: darkgoldenrod;
+  }
 
-.board div {
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid grey;
-  background-color: sandybrown;
-  
-}
+  main {
+    width: 50%;
+    border: 2px solid #804000;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  section {
+    text-align: center;
+    border: 2px solid #009933;
+    background-color:  #ecf9f2;
+    padding: 1rem;
+    align-content: center;
+    border-radius: 5px;
+    color: #26734d;
+  }
+
+  button {
+    border-radius: 5px;
+    background-color: #339966;
+    border: 2px solid  #206040;
+    font-size: 1.3em;
+    padding: .8rem;
+    margin: 5%;
+    color: whitesmoke;
+  }
+
+  button:hover {
+    border-radius: 5px;
+    background-color: #40bf80;
+    border: 2px solid  #206040;
+    font-size: 1.3em;
+    padding: .8rem;
+    margin: 5%;
+    color: whitesmoke;
+    cursor: pointer;
+  }

@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Adventure Game</title>
-  <script src="https://use.fontawesome.com/402c56e914.js"></script>
+  <title>Treasure Hunt Game</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
-  <header>
-    <h1>Adventure Game</h1>
-    <button onclick="startGame();">Start Game</button>
-  </header>
-  <section class="board">
-    <div>0</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </section>
-<!--
-  <audio id="winAudio">
-    <source src="horse.ogg" type="audio/ogg">
-    <source src="horse.mp3" type="audio/mpeg">
+  <main>
+    <header>
+      <i class="far fa-compass"></i>
+      <h1>&nbsp;Treasure Hunt Game</h1>
+    </header>
+    <section>
+      <h3>Welcome to the Treasure Hunt Game.</h3><br>
+      <p>INSTRUCTIONS: To begin, click on the Start Game button below. Enter your name and level of difficulty.</p> 
+      <br>
+      <p>The objective of the game is to enter your directions (north, east, west, south) until you find the treasure.</p>
+      <button onclick="startGame();">Start Game</button>
+    </section>
+  </main>
+  <audio id="hiSound">
+    <source src="audio/howdy.wav" type="audio/wav">
     Your browser does not support the audio element.
   </audio>
--->
+  <audio id="nSound">
+    <source src="audio/north.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="eSound">
+    <source src="audio/east.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="sSound">
+    <source src="audio/south.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="wSound">
+    <source src="audio/west.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="tSound">
+    <source src="audio/found.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
   <script src="game.js"></script>
 </body> 
 </html>
