@@ -29,7 +29,9 @@ function startGame() {
     maxX = 8;
     maxY = 8;
   } else {
-    return false;
+    alert("Please try again and enter a level.");
+    console.log("Please try again and enter a level");
+    return lvlSelect;
   }
   
   // Defines the size of the game play area
@@ -70,8 +72,8 @@ function startGame() {
           userY = newY;
         } else {
           document.getElementById("eSound").play();
-          alert("Unless you can fly, you will have to hike through the Cascades.");
-          console.log("Unless you can fly, you will have to hike through the Cascades.");
+          alert("Dang! The Cascades are in the way.");
+          console.log("Dang! The Cascades are in the way.");
         }
     } else if (direction == "south") {
       newX = userX;
@@ -82,8 +84,8 @@ function startGame() {
           userY = newY;
         } else {
           document.getElementById("sSound").play();
-          alert("Welcome to Oregon!");
-          console.log("Welcome to Oregon!");
+          alert("You have reached Oregon!");
+          console.log("You have reached Oregon!");
         }
     } else if (direction == "west") {
       newX = userX - 1;
@@ -94,12 +96,12 @@ function startGame() {
           userY = newY;
         } else {
           document.getElementById("wSound").play();
-          alert("It's too cold to swim the Pacific ocean.");
-          console.log("It's too cold to swim the Pacific ocean.");
+          alert("Nothing here but Pacific ocean.");
+          console.log("Nothing here but Pacific ocean.");
         }
     } else {
-      alert("Please enter real direction.");
-      console.log("Please enter real direction.");
+      alert("Please enter a real direction.");
+      console.log("Please enter a real direction.");
     }
 
     //validate User X/Y location
@@ -109,8 +111,8 @@ function startGame() {
     //see if user location matches treasure
     if (userX == treasureX && userY == treasureY) {
       document.getElementById("tSound").play();
-      alert("Hooray! You found the treasure");
-      console.log("Hooray! You found the treasure");
+      alert("Hoooraay! You found the treasure!");
+      console.log("Hoooraay! You found the treasure!");
       treasureFound = true;
     }  
   }
